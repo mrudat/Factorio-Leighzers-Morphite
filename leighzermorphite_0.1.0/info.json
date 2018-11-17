@@ -1,0 +1,11 @@
+{
+  "name": "leighzermorphite",
+  "version": "0.1.0",
+  "title": "Leighzer's Morphite",
+  "author": "Leighzer",
+  "contact": "Please message me on the factorio forums my username is leighzer.",
+  "homepage": "",
+  "factorio_version": "0.16",
+  "dependencies": [ "base >= 0.16" ],
+  "description": "Configurable vanilla friendly mod that adds a new supplemental ore to the game. Without research this new ore can be processed into the other basic ores (iron, copper, stone, and coal)."
+}
