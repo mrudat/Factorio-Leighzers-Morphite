@@ -43,6 +43,17 @@ data:extend(
         ingredients = {{"morphite-ore", 1}},
         result = "coal",
         result_count = 1
+    },
+
+    {--recipe prototype that allows for crafting morphite into morphite fuel
+    type = "recipe",
+    name = "morphite-to-morphite-fuel",
+    energy_required = 0.5,
+    enabled = settings.startup["ismorphiteToMorphiteFuelEnabled"].value,
+    category = "crafting",
+    ingredients = {{"morphite-ore", 2}},
+    result = "morphite-fuel",
+    result_count = 1
     }
 
 

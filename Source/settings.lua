@@ -35,7 +35,14 @@ data:extend(
         name = "ismorphiteToCoalEnabled",
         setting_type = "startup",
         default_value = true,
-    }    
+    },
+    
+    {
+        type = "bool-setting",
+        name = "ismorphiteToMorphiteFuelEnabled",
+        setting_type = "startup",
+        default_value = true,
+    }
 
 })
 

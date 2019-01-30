@@ -9,6 +9,18 @@ data:extend(
             subgroup = "raw-resource",
             order = "a-b-a",
             stack_size = 50,
-          }   
+          },
+          {
+          type = "item",
+          name = "morphite-fuel",
+          icons = {{icon = "__leighzermorphite__/graphics/icons/morphite-fuel.png"}},           
+          icon_size = 32,
+          flags = {"goes-to-main-inventory"},
+          fuel_category = "chemical",
+          fuel_value = "8MJ",
+          subgroup = "intermediate-product",
+          order = "p[morphite-fuel]",
+          stack_size = 50,
+        }    
 
 })
