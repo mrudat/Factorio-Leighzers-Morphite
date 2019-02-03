@@ -13,4 +13,4 @@ data:extend(
         name = "morphite-ore"
         }
 
-    })
+})

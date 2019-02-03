@@ -42,6 +42,20 @@ data:extend(
         name = "ismorphiteToMorphiteFuelEnabled",
         setting_type = "startup",
         default_value = true,
+    },
+
+    {
+        type = "bool-setting",
+        name = "ismorphiteToCrudeOilEnabled",
+        setting_type = "startup",
+        default_value = true,
+    },
+
+    {
+        type = "bool-setting",
+        name = "ismorphiteToUraniumOreEnabled",
+        setting_type = "startup",
+        default_value = true,
     }
 
 })
