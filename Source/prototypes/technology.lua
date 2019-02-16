@@ -49,3 +49,33 @@ if settings.startup["ismorphiteToUraniumOreEnabled"].value then
         }
     })
 end
+
+if settings.startup["ismorphiteToWildcardEnabled"].value then 
+    data:extend(
+    {
+        {        
+            type = "technology",
+            name = "morphite-centrifugation",
+            icon_size = 128,
+            icon = "__leighzermorphite__/graphics/technology/morphite-centrifugation.png",
+            prerequisites = {"nuclear-power"},
+            effects = {
+                {type="unlock-recipe",
+                recipe="morphite-to-wildcard"}
+            },
+            unit =
+            {
+                ingredients =
+                {
+                    {"science-pack-1", 1},
+                    {"science-pack-2", 1},
+                    {"science-pack-3", 1},
+                    {"production-science-pack", 1}
+                },
+                time = 30,
+                count = 1500
+            },
+            order = "e-p-b-d"
+        }
+    })
+end

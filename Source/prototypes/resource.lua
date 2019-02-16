@@ -5,7 +5,7 @@ data:extend(
    {--prototype for the actual ore object that is in the ground
    type = "resource",
    name = "morphite-ore",
-   icons = {{icon = "__leighzermorphite__/graphics/icons/morphite-ore.png", tint={r=1, g=0, b=1, a = 1}}},
+   icons = {{icon = "__leighzermorphite__/graphics/icons/morphite-ore.png"}},
    icon_size = 32,
    flags = {"placeable-neutral"},
    order="h",

@@ -56,6 +56,20 @@ data:extend(
         name = "ismorphiteToUraniumOreEnabled",
         setting_type = "startup",
         default_value = true,
+    },
+
+    {
+        type = "bool-setting",
+        name = "ismorphiteToWildcardEnabled",
+        setting_type = "startup",
+        default_value = true,
+    },
+
+    {
+        type = "bool-setting",
+        name = "ismorphiteToRawWoodEnabled",
+        setting_type = "startup",
+        default_value = true,
     }
 
 })
