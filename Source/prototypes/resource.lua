@@ -11,10 +11,9 @@ data:extend(
    order="h",
    map_color = {r=1, g=0, b=1},--color used for ore patch when viewed from mini map
    minable =
-   {
-     hardness = 0.9,
+   {     
      mining_particle = "morphite-ore-particle",
-     mining_time = 2,
+     mining_time = 1,
      result = "morphite-ore"
    },
    collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
@@ -27,7 +26,7 @@ data:extend(
      richness_multiplier = 1500,
      richness_base = 10,
      richness_multiplier_distance_bonus = 20,
-     coverage = ((0.006 / 3) / 1.1 * 1.49) * 2, --double the amount of vanilla iron coverage
+     coverage = ((0.006 / 3) / 1.1 * 1.49) * 1.5, --1.5 x vanilla iron coverage from 0.16... 0.17 resource gen is too hairy to understand for now
      peaks =
     {
       {

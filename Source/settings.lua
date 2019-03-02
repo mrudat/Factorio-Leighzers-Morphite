@@ -5,6 +5,7 @@ data:extend(
         name = "ismorphitePlacementEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "a"
     },
 
     {
@@ -12,6 +13,7 @@ data:extend(
         name = "ismorphiteToIronEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "b"
     },
 
 
@@ -20,6 +22,7 @@ data:extend(
         name = "ismorphiteToCopperEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "c"
     },
 
     {
@@ -27,6 +30,7 @@ data:extend(
         name = "ismorphiteToStoneEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "d"
     },
 
 
@@ -35,6 +39,7 @@ data:extend(
         name = "ismorphiteToCoalEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "e"
     },
     
     {
@@ -42,6 +47,7 @@ data:extend(
         name = "ismorphiteToMorphiteFuelEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "f"
     },
 
     {
@@ -49,6 +55,7 @@ data:extend(
         name = "ismorphiteToCrudeOilEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "g"
     },
 
     {
@@ -56,6 +63,7 @@ data:extend(
         name = "ismorphiteToUraniumOreEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "h"
     },
 
     {
@@ -63,6 +71,7 @@ data:extend(
         name = "ismorphiteToWildcardEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "i"
     },
 
     {
@@ -70,6 +79,15 @@ data:extend(
         name = "ismorphiteToRawWoodEnabled",
         setting_type = "startup",
         default_value = true,
+        order = "j"
+    },
+
+    {
+        type = "bool-setting",
+        name = "ismorphiteToExternalModEnabled",
+        setting_type = "startup",
+        default_value = true,
+        order = "k"
     }
 
 })

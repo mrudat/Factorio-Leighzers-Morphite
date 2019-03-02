@@ -8,9 +8,12 @@ if settings.startup["ismorphiteToIronEnabled"].value then
             category = "crafting",--basic crafting category, this means tier one assembler and up can craft, or you can craft by hand
             ingredients = {{"morphite-ore", 1}},
             result = "iron-ore",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "a"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-iron")
 end
 
 if settings.startup["ismorphiteToCopperEnabled"].value then 
@@ -23,9 +26,12 @@ if settings.startup["ismorphiteToCopperEnabled"].value then
             category = "crafting",
             ingredients = {{"morphite-ore", 1}},
             result = "copper-ore",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "b"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-copper")
 end
 
 if settings.startup["ismorphiteToStoneEnabled"].value then 
@@ -38,9 +44,12 @@ if settings.startup["ismorphiteToStoneEnabled"].value then
             category = "crafting",
             ingredients = {{"morphite-ore", 1}},
             result = "stone",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "c"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-stone")
 end
 
 if settings.startup["ismorphiteToCoalEnabled"].value then 
@@ -51,11 +60,14 @@ if settings.startup["ismorphiteToCoalEnabled"].value then
             energy_required = 1,
             enabled = true,
             category = "crafting",
-            ingredients = {{"morphite-ore", 1}},
+            ingredients = {{"morphite-ore", 1}},                       
             result = "coal",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "d"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-coal")
 end
 
 if settings.startup["ismorphiteToMorphiteFuelEnabled"].value then 
@@ -68,9 +80,12 @@ if settings.startup["ismorphiteToMorphiteFuelEnabled"].value then
             category = "crafting",
             ingredients = {{"morphite-ore", 2}},
             result = "morphite-fuel",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "h"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-morphite-fuel")
 end
 
 if settings.startup["ismorphiteToCrudeOilEnabled"].value then 
@@ -84,12 +99,13 @@ if settings.startup["ismorphiteToCrudeOilEnabled"].value then
             ingredients = {{type="item",name="morphite-ore", amount=5},{type="fluid", name="water", amount=50}},    
             icon = "__leighzermorphite__/graphics/icons/morphite-liquefaction.png",
             icon_size = 32,
-            subgroup = "fluid-recipes",
+            subgroup = "leighzermorphite-vanilla",
             results = {{type="fluid",name="crude-oil",amount=30}},
             main_product= "",
-            order = "a[oil-processing]-d"        
+            order = "g"        
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-crude-oil")
 end
 
 if settings.startup["ismorphiteToUraniumOreEnabled"].value then 
@@ -102,9 +118,12 @@ if settings.startup["ismorphiteToUraniumOreEnabled"].value then
             category = "chemistry",
             ingredients = {{type="item",name="morphite-ore",amount=1},{type="fluid", name="steam", amount=25},{type="fluid", name="sulfuric-acid", amount=2}},
             result = "uranium-ore",
-            result_count = 1
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "e"
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-uranium-ore")
 end
 
 if settings.startup["ismorphiteToWildcardEnabled"].value then 
@@ -118,23 +137,28 @@ if settings.startup["ismorphiteToWildcardEnabled"].value then
             ingredients = {{type="item",name="morphite-ore",amount=6}},
             icon = "__leighzermorphite__/graphics/icons/morphite-to-wildcard.png",
             icon_size = 32,
-            subgroup = "raw-resource",
+            subgroup = "leighzermorphite-vanilla",
+            order = "i",
             results = {{type="item", name="iron-ore",amount=2},{type="item", name="copper-ore",amount=2},{type="item", name="stone",amount=2},{type="item", name="coal",amount=2}},            
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-wildcard")
 end
 
 if settings.startup["ismorphiteToRawWoodEnabled"].value then 
     data:extend({
         {--recipe prototype that allows for crafting morphite into raw wood
             type = "recipe",
-            name = "morphite-to-raw-wood",
+            name = "morphite-to-wood",
             energy_required = 1,
             enabled = true,
             category = "crafting",
             ingredients = {{"morphite-ore", 1}},
-            result = "raw-wood",            
-            result_count = 1
+            result = "wood",            
+            result_count = 1,
+            subgroup = "leighzermorphite-vanilla",
+            order = "f"                    
         }
     })
+    AddProductivityEnabledRecipe("morphite-to-wood")
 end
