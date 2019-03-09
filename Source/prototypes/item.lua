@@ -19,6 +19,5 @@ data:extend(
           subgroup = "intermediate-product",
           order = "p[morphite-fuel]",
           stack_size = 50,
-        }    
-
+          }
 })

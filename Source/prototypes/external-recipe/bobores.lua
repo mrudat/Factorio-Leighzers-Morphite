@@ -12,8 +12,8 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
 
     --tech level 1 defined by bobingabout
     if bobmods.ores.tin.enabled then
-        data:extend({
-            {
+        AddRecipeDataBundle(--this function stores the below data in leighzermods.recipeDataBundles    
+            {--recipe prototype
                 type = "recipe",
                 name = "morphite-to-tin",
                 energy_required = 1, 
@@ -24,13 +24,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores", --have this value equal to item-subgroup name created above
                 order = "a"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-tin")
+            },
+            nil, --prototype for technology to unlock recipe
+            bobmods.ores.tin.enabled, --bool to indicate if this recipe should be inserted into data.raw (can be later flipped by other mods to override what recipes ultimately get added)
+            true --bool to indicate if this recipe should allow productivity modules
+        )
     end
 
     if bobmods.ores.lead.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-lead",
@@ -42,13 +44,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "b"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-lead")
+            },
+            nil,
+            bobmods.ores.tin.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.quartz.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-quartz",
@@ -60,14 +64,16 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "c"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-quartz")
+            },
+            nil,
+            bobmods.ores.quartz.enabled,
+            true
+        )        
     end
 
     --tech level 2 defined by bobingabout
     if bobmods.ores.nickel.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-nickel",
@@ -79,13 +85,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "d"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-nickel")
+            },
+            nil,
+            bobmods.ores.nickel.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.zinc.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-zinc",
@@ -97,13 +105,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "e"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-zinc")
+            },
+            nil,
+            bobmods.ores.zinc.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.bauxite.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-bauxite",
@@ -115,13 +125,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "f"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-bauxite")
+            },
+            nil,
+            bobmods.ores.bauxite.enabled,
+            true
+        )
     end
 
     if bobmods.ores.cobalt.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-cobalt",
@@ -133,13 +145,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "g"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-cobalt")
+            },
+            nil,
+            bobmods.ores.cobalt.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.silver.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-silver",
@@ -151,14 +165,16 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "h"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-silver")
+            },
+            nil,
+            bobmods.ores.silver.enabled,
+            true
+        )
     end    
 
     --tech level 3 defined by bobingabout
     if bobmods.ores.rutile.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-rutile",
@@ -170,13 +186,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "i"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-rutile")
+            },
+            nil,
+            bobmods.ores.rutile.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.tungsten.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-tungsten",
@@ -188,13 +206,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "j"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-tungsten")
+            },
+            nil,
+            bobmods.ores.tungsten.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.gold.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-gold",
@@ -206,13 +226,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "k"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-gold")
+            },
+            nil,
+            bobmods.ores.gold.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.gems.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-gems",
@@ -224,13 +246,15 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "l"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-gems")
+            },
+            nil,
+            bobmods.ores.gems.enabled,
+            true
+        )        
     end
 
     if bobmods.ores.thorium.enabled then
-        data:extend({
+        AddRecipeDataBundle(    
             {
                 type = "recipe",
                 name = "morphite-to-thorium",
@@ -242,13 +266,30 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
                 result_count = 1,
                 subgroup = "leighzermorphite-bobores",
                 order = "m"
-            }
-        })
-        AddProductivityEnabledRecipe("morphite-to-thorium")
+            },
+            nil,
+            bobmods.ores.thorium.enabled,
+            true
+        )        
     end
 
+    --liquids
     if bobmods.ores.lithia_water.enabled then
-        
+        AddRecipeDataBundle(    
+            {
+                type = "recipe",
+                name = "morphite-to-lithia-water",
+                energy_required = 7.5, 
+                enabled = true,
+                category = "chemistry",
+                ingredients = {{type="item",name="morphite-ore", amount=1},{type="fluid", name="water", amount=1000}},
+                results = {{type="fluid",name="lithia-water",amount=1000}},                
+                subgroup = "leighzermorphite-bobores", 
+                order = "n"
+            },
+            nil,
+            bobmods.ores.lithia_water.enabled,
+            true
+        )        
     end    
-
 end

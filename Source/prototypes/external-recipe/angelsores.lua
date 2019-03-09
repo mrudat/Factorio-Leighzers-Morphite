@@ -1,6 +1,6 @@
 if angelsmods and angelsmods.refining then
     
-    --add item sub group so we can keep all of the morphite to bobs ores recipes in the same section
+    --add item sub group so we can keep all of the morphite to angels ores recipes in the same section
     data:extend({
         {
             type = "item-subgroup",
@@ -9,9 +9,15 @@ if angelsmods and angelsmods.refining then
             order = "ab",
           }
     })
+
+    --Disable these recipes since Angles provides a way to get them/they would be OP if enabled
+    DisableDataInsert("morphite-to-iron")
+    DisableDataInsert("morphite-to-copper")    
+    DisableDataInsert("morphite-to-wildcard")   
+    DisableDataInsert("morphite-to-uranium-ore")
         
-    data:extend({
-        {
+    AddRecipeDataBundle(    
+        {--recipe prototype
             type = "recipe",
             name = "morphite-to-angels-ore1",
             energy_required = 1, 
@@ -22,11 +28,13 @@ if angelsmods and angelsmods.refining then
             result_count = 1,
             subgroup = "leighzermorphite-angelsrefining", 
             order = "a"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore1")
+        },
+        nil,--prototype for technology to unlock recipe
+        true,--bool to indicate this bundle should be added to data.raw
+        true--bool to indicate that this recipe permits productivity modules
+    )    
 
-    data:extend({
+    AddRecipeDataBundle(    
         {
             type = "recipe",
             name = "morphite-to-angels-ore2",
@@ -38,11 +46,13 @@ if angelsmods and angelsmods.refining then
             result_count = 1,
             subgroup = "leighzermorphite-angelsrefining", 
             order = "b"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore2")
+        },
+        nil,
+        true,
+        true
+    )   
 
-    data:extend({
+    AddRecipeDataBundle(    
         {
             type = "recipe",
             name = "morphite-to-angels-ore3",
@@ -54,11 +64,13 @@ if angelsmods and angelsmods.refining then
             result_count = 1,
             subgroup = "leighzermorphite-angelsrefining", 
             order = "c"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore3")
+        },
+        nil,
+        true,
+        true
+    )   
 
-    data:extend({
+    AddRecipeDataBundle(    
         {
             type = "recipe",
             name = "morphite-to-angels-ore4",
@@ -70,56 +82,67 @@ if angelsmods and angelsmods.refining then
             result_count = 1,
             subgroup = "leighzermorphite-angelsrefining", 
             order = "d"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore4")
-
-    data:extend({
-        {
-            type = "recipe",
-            name = "morphite-to-angels-ore5",
-            energy_required = 1, 
-            enabled = true,
-            category = "crafting",
-            ingredients = {{"morphite-ore", 1}},
-            result = "angels-ore5",
-            result_count = 1,
-            subgroup = "leighzermorphite-angelsrefining", 
-            order = "e"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore5")
-
-    data:extend({
-        {
-            type = "recipe",
-            name = "morphite-to-angels-ore6",
-            energy_required = 1, 
-            enabled = true,
-            category = "crafting",
-            ingredients = {{"morphite-ore", 1}},
-            result = "angels-ore6",
-            result_count = 1,
-            subgroup = "leighzermorphite-angelsrefining", 
-            order = "f"
-        }
-    })
-    AddProductivityEnabledRecipe("morphite-to-angels-ore6")
-
-    --data:extend({
-    --    {
-    --        type = "recipe",
-    --        name = "morphite-to-thermal-water",
-    --        energy_required = 1, 
-    --        enabled = true,
-    --        category = "crafting",
-    --        ingredients = {{"morphite-ore", 1}},
-    --        result = "thermal-water",
-    --        result_count = 1,
-    --        subgroup = "leighzermorphite-angelsrefining", 
-    --        order = "e"
-    --    }
-    --})
+        },
+        nil,
+        true,
+        true
+    )    
     
+    if bobmods and bobmods.plates then
 
+        AddRecipeDataBundle(    
+            {
+                type = "recipe",
+                name = "morphite-to-angels-ore5",
+                energy_required = 1, 
+                enabled = true,
+                category = "crafting",
+                ingredients = {{"morphite-ore", 1}},
+                result = "angels-ore5",
+                result_count = 1,
+                subgroup = "leighzermorphite-angelsrefining", 
+                order = "e"
+            },
+            nil,
+            true,
+            true
+        )        
+
+        AddRecipeDataBundle(    
+            {
+                type = "recipe",
+                name = "morphite-to-angels-ore6",
+                energy_required = 1, 
+                enabled = true,
+                category = "crafting",
+                ingredients = {{"morphite-ore", 1}},
+                result = "angels-ore6",
+                result_count = 1,
+                subgroup = "leighzermorphite-angelsrefining", 
+                order = "f"
+            },
+            nil,
+            true,
+            true
+        )
+    end
+
+    AddRecipeDataBundle(    
+        {
+            type = "recipe",
+            name = "morphite-to-thermal-water",
+            energy_required = 7.5, 
+            enabled = true,
+            category = "chemistry",
+            ingredients = {{type="item",name="morphite-ore", amount=1},{type="fluid", name="water", amount=500}},
+            results = {{type="fluid",name="thermal-water",amount=500}},
+            result_count = 50,            
+            subgroup = "leighzermorphite-angelsrefining",             
+            order = "g"
+        },
+        nil,
+        true,
+        true    
+    )    
+    
 end
