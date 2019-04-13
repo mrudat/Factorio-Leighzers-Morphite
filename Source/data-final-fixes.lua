@@ -13,7 +13,7 @@ local itemTable =
 if deadlock_stacking then
   for _, item in pairs(itemTable) do
     if data.raw.item[item[1]] then
-      deadlock_stacking.create(item[1], "__leighzermorphite__/graphics/"..item[1].."-stack.png", "deadlock-stacking-"..item[2], 32)
+      deadlock_stacking.create(item[1], "__leighzermorphite__/graphics/icons/"..item[1].."-stack.png", "deadlock-stacking-"..item[2], 32)
     end
   end
 end
