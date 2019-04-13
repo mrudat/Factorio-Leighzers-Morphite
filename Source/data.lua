@@ -2,8 +2,12 @@ if not leighzermods then --generic mod variable to store information that may be
     leighzermods = {}
 end
 
-if not leighzermods.productivityEnabledRecipes then --list of recipe names that are going to get productivity modules enabled
-    leighzermods.productivityEnabledRecipes = {}
+if not leighzermods.leighzermorphite then
+    leighzermods.leighzermorphite = {}
+end
+
+if not leighzermods.leighzermorphite.productivityEnabledRecipes then --list of recipe names that are going to get productivity modules enabled
+    leighzermods.leighzermorphite.productivityEnabledRecipes = {}
 end
 
 if not leighzermods.recipeDataBundles then --list of recipes+technology+more prototypes to be inserted to data.raw (we keep this list so mods may at first add recipes, then down the road other mods can stop the insertion of the recipe, trying to keep data as clean as possible)

@@ -40,7 +40,7 @@ function InsertData()
             end
 
             if recipeDataBundle.allowProductivity then
-                table.insert(leighzermods.productivityEnabledRecipes, recipeDataBundle.recipe.name)
+                table.insert(leighzermods.leighzermorphite.productivityEnabledRecipes, recipeDataBundle.recipe.name)
             end
         end
     end
@@ -49,7 +49,7 @@ function InsertData()
     --leighzermodds.productivityEnabledRecipes is the list of recipe names we want to allow the use of productivity modules with
     for k, v in pairs(data.raw.module) do
         if v.name:find("productivity%-module") and v.limitation then
-        for _, recipe in ipairs(leighzermods.productivityEnabledRecipes) do
+        for _, recipe in ipairs(leighzermods.leighzermorphite.productivityEnabledRecipes) do
             if data.raw["recipe"][recipe] then
             table.insert(v.limitation, recipe)
             end

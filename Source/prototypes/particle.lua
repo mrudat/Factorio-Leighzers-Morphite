@@ -44,21 +44,21 @@ data:extend(
     shadows =
     {
       {
-        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-4.png",
+        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-1.png",
         priority = "extra-high",
         width = 16,
         height = 16,
         frame_count = 1
       },
       {
-        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-4.png",
+        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-2.png",
         priority = "extra-high",
         width = 16,
         height = 16,
         frame_count = 1
       },
       {
-        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-4.png",
+        filename = "__leighzermorphite__/graphics/entity/morphite-ore-particle/morphite-ore-particle-shadow-3.png",
         priority = "extra-high",
         width = 16,
         height = 16,
